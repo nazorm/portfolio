@@ -63,7 +63,7 @@ export const portfolioDta = [
     img: bookmarkImg,
     liveUrl: 'https://nazorm.github.io/Bookmark/',
     gitUrl: 'https://github.com/nazorm/Bookmark',
-    overview: "Bookmark UI mock of a book keeping landing page, built using HTML5, CSS3, and Vanilla Javascript.",
+    overview: "Bookmark UI mock of a book-keeping landing page, built using HTML5, CSS3, and Vanilla Javascript.",
    },
    {
     name: 'Portfolio V1',
