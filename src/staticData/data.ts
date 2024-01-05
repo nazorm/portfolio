@@ -1,3 +1,26 @@
+import typescriptIcon from "../assets/typescript.svg";
+import javascriptIcon from "../assets/javascript.svg";
+import reduxIcon from "../assets/redux.svg";
+import reactIcon from "../assets/react.svg";
+import htmlIcon from "../assets/html.svg";
+import gitIcon from "../assets/git.svg";
+import cssIcon from  "../assets/css.svg";
+import tailwindIcon from "../assets/tailwind.svg";
+import vsIcon from   "../assets/vscode.svg";
+import nextIcon from "../assets/next.svg";
+import jestIcon from "../assets/jest.svg";
+
+import { ReactComponent as TypescriptIcon } from "../assets/typescript.svg";
+import { ReactComponent as JavascriptIcon } from "../assets/javascript.svg";
+import { ReactComponent as ReduxIcon } from "../assets/redux.svg";
+import { ReactComponent as ReactIcon } from "../assets/react.svg";
+import { ReactComponent as HTMLIcon } from "../assets/html.svg";
+import { ReactComponent as GITIcon } from "../assets/git.svg";
+import { ReactComponent as CSSIcon } from "../assets/css.svg";
+import { ReactComponent as TailwindIcon } from "../assets/tailwind.svg";
+import { ReactComponent as VSIcon } from "./assets/vscode.svg";
+import { ReactComponent as NextIcon } from "../assets/next.svg";
+import { ReactComponent as JestIcon } from "../assets/jest.svg";
 
 export const resumeData = {
   workExperience: [
@@ -44,7 +67,7 @@ export const resumeData = {
       course: "Advanced Software Engineering Mentorship ",
       institution: "Enye",
       timeFrame: "Feb 2021 -  Apr 2021",
-      educationSummary:"",
+      educationSummary: "",
       educationHighlights: [
         "Working with Several Frameworks",
         "Test driven development",
@@ -57,8 +80,7 @@ export const resumeData = {
       course: "Software Engineering Mentorship",
       institution: "SheCodeAfrica",
       timeFrame: "Jun 2020 - Aug 2020",
-      educationSummary:
-        "",
+      educationSummary: "",
       educationHighlights: [
         "Vanilla Javascript",
         "Object Oriented Programming",
@@ -71,17 +93,9 @@ export const resumeData = {
       institution: "University of Benin",
       timeFrame: "2014 - 2018",
       educationSummary: "Second Class Honours 4.0/5.0",
-      educationHighlights:[],
+      educationHighlights: [],
     },
   ],
-  techStack: [
-    "Javascript",
-    "React",
-    "Next JS",
-    "Redux",
-    "HTML/CSS",
-    "SCSS",
-    "Cypress",
-    "Git",
-  ],
+
 };
+

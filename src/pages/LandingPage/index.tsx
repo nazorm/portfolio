@@ -8,13 +8,6 @@ import { NavBar } from '../../Layout/Navbar';
 export const LandingPage = () => {
     return (
         <Wrapper id='home'>
-            <header className='header'>
-                <div className='logo-area'>
-                    <div className='circle circlelogo'></div>
-                    <h1 className='logo-title'>Nazorm</h1>
-                </div>
-                <NavBar />
-            </header>
             <div className='circle circle1'></div>
             <div className='circle circle2'></div>
             <div className='circle circle3'></div>
@@ -51,35 +44,10 @@ export const LandingPage = () => {
 
 
 const Wrapper = styled.section`
-    height: 100vh;
+    height: 90vh;
     background-color: #F0F1FF;
     position: relative;
     overflow: hidden;
-    .header{
-        width: 90%;
-        height: 100px;
-        margin: 0 auto;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .circlelogo{
-        width: 50px;
-        height: 50px;
-        left: 5%;
-        top: 20%;
-    }
-    .logo-title{
-        margin: 0;
-        position: absolute;
-        left: 6%;
-        top: 35%;
-        font-size: 14px;
-        font-family: 'Dancing Script', cursive;
-        font-weight: 700;
-        /* color: #F0F1FF; */
-    }
     .circle{
         position: absolute;
         border-radius: 50%;
@@ -132,21 +100,21 @@ const Wrapper = styled.section`
     }
     @keyframes bounce{
     0%{
-        bottom: 0%;
+        bottom: 2%;
     }
     50%{
-        bottom: 1%;
+        bottom: 4%;
     }
     100%{
-        bottom: 0%;
+        bottom: 2%;
     }
   }
 `;
 const Intro = styled.div`
     width: 45%;
     a{
-        text-decoration: none;
-    }
+       text-decoration: none;
+      }
     .media-container{
         display: flex;
         align-items: center;
@@ -155,7 +123,6 @@ const Intro = styled.div`
                 width: 25px;
                 height: 25px;
                 margin: 0 15px 0 0;
-                /* fill: linear-gradient(to bottom right, #CDB5FF, #FCA5F1); */
                 fill: black;
     }
     .scratch{
@@ -204,11 +171,12 @@ const Intro = styled.div`
             font-size: 1rem;
             line-height: 1.5rem;
          }
+       }
 
-    }
     @media only screen and (max-width: 700px){
         position: relative;
         z-index: 1;
+        width: 100%;
      }
 `;
 const ImageContainer = styled.div`
@@ -232,7 +200,7 @@ const ImageContainer = styled.div`
 const Content = styled.div`
     display: flex;
     justify-content: center;
-    margin: 5% auto 0;
+    margin: 0 auto 0;
     width: 90%;
     position:absolute;
     bottom: -1%; 

@@ -1,21 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { portfolioDta } from '../../staticData/portfolioData';
 import { Fade } from "react-awesome-reveal";
-import { BsGithub } from 'react-icons/bs';
-import { AiOutlineThunderbolt } from 'react-icons/ai';
+import Modal from '@mui/material/Modal';
+import { ProjectOverview } from './components/ProjectOverview';
 
- const PortfolioPage = () => {
+interface IProjectOverviewProps {
+    name: string,
+    img: string,
+    liveUrl: string,
+    gitUrl: string,
+    overview: string,
+
+}
+const PortfolioPage = () => {
+    const [isOverviewOpen, setIsOverviewOpen] = useState(false);
+    const [activeProject, setActiveProject] = useState<IProjectOverviewProps>();
+
+    const handleOpen = () => setIsOverviewOpen(true);
+    const handleClose = () => setIsOverviewOpen(false);
+    const projectToView = (name: string) => {
+        const project = portfolioDta.find((data) => data.name === name);
+        setActiveProject(project);
+    }
+
     return (
         <>
             <Wrapper id="portfolio">
                 <h1>Recent Works</h1>
                 <section className='projects'>
                     {portfolioDta.map((data, index) => (
+
                         <Fade key={index} direction={'up'} triggerOnce={true}>
-                            <Project className='project'>
+                            <Project className='project' onClick={() => {
+                                handleOpen();
+                                projectToView(data.name)
+                            }}>
                                 {/* <Image src={data.img} width={550} height={300} alt='project-preview' /> */}
-                                <Image src={data.img} className='preview-image' alt='project-preview' />
+                                <img src={data.img} className='preview-image' alt='project-preview' />
                                 <Fade>
                                     <div className='project-info'>
                                         <div></div>
@@ -30,6 +52,21 @@ import { AiOutlineThunderbolt } from 'react-icons/ai';
                         </Fade>
                     ))}
                 </section>
+                {!!activeProject && isOverviewOpen && (
+                    <Modal
+                        open={isOverviewOpen}
+                        onClose={handleClose}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <ProjectOverview
+                            name={activeProject.name}
+                            img={activeProject.img}
+                            liveUrl={activeProject.liveUrl}
+                            gitUrl={activeProject.gitUrl}
+                            overview={activeProject.overview} />
+                    </Modal>
+                )}
 
             </Wrapper>
         </>
@@ -41,12 +78,14 @@ const Wrapper = styled.div`
     width: 80%;
     margin: 5% auto;
     font-family: 'Roboto', sans-serif;
+    white-space: pre-wrap;
     .projects{
         margin: 5% auto;
-        width: 80%;
+        width: 85%;
         font-family: 'Cantora One', sans-serif;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        text-align: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 15px;
         @media only screen and (max-width: 700px){
             width: 90%;
@@ -58,13 +97,10 @@ const Wrapper = styled.div`
             width: 90%;
         }
 `;
-const Image = styled.img`
-
-`;
 
 const Project = styled.div`
     display: relative;
-    width: 280px;
+    width: 300px;
     @media only screen and (max-width: 700px){
         width: 100%;
         }
@@ -74,21 +110,22 @@ const Project = styled.div`
             position: absolute;
             top: 0;
             left: 0;
-            width: 280px;
-            height: 200px;
+            width: 300px;
+            height: 250px;
             background-image: linear-gradient(to bottom right, #CDB5FF, #FCA5F1);
+            line-height: 1.8;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            line-height: 1.8;
-            border-radius: 10px;
             opacity: 0.9;
             animation: createBox 0.80s;
             @media only screen and (max-width: 700px){
-        width: 100%;
-        }
-        }
+                width: 90%;
+                height: 200px;
+                margin: auto;
+            }
+          }
         @keyframes createBox {
             from {
                 transform: scale(0);
@@ -100,12 +137,14 @@ const Project = styled.div`
            
     }
     .preview-image{
-         width: 280px;
-         height: 200px;
+         width: 300px;
+         height: 250px;
          border-radius: 10px;
          object-fit: fill;
          @media only screen and (max-width: 700px){
-        width: 100%;
+           width: 90%;
+           height: 200px;
+           margin: auto;
         }
     }
     .project-info{
@@ -113,13 +152,3 @@ const Project = styled.div`
     
     }
 `;
-
-
-
-      /* ${customMedia.lessThan('large')`
-            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-        `}
-        ${customMedia.lessThan('small')`
-            display: flex;
-            flex-direction: column;
-        `} */

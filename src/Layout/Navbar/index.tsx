@@ -5,6 +5,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { BsBriefcase } from 'react-icons/bs';
 import { AiOutlineHome, AiOutlineUser, AiOutlineCloseCircle } from 'react-icons/ai'
 import { BiDockRight } from 'react-icons/bi'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export const NavBar = () => {
     const [active, setActive] = useState('home');
@@ -15,6 +16,22 @@ export const NavBar = () => {
     const handleActiveNav = (nav: string) => {
         setActive(nav)
     }
+
+
+
+
+
+//     <Link 
+//     activeClass="active" 
+//     to="test1" 
+//     spy={true} 
+//     smooth={true} 
+//     offset={50} 
+//     duration={500} 
+//     onSetActive={handleActiveNav}
+//   >
+//     Test 1
+//   </Link>
     return (
         <>
 
@@ -53,7 +70,7 @@ export const NavBar = () => {
                     <AiOutlineCloseCircle onClick={displayMobileNav} className='icon close-icon' />
                     <div className={active === 'home' ? 'mobile-active mobile-selected' : 'mobile-active'} onClick={() => { handleActiveNav('home') }}>
                         <a href="#home" className={active === 'home' ? 'icon mobile-icon__active' : 'icon mobile-icon'}>
-                        <AiOutlineHome className={active === 'resume' ? 'icon mobile-icon__active' : 'icon mobile-icon'} />
+                        <AiOutlineHome className={active === 'home' ? 'icon mobile-icon__active' : 'icon mobile-icon'} />
                         </a>
                     </div>
                     <div className={active === 'resume' ? 'mobile-active mobile-selected' : 'mobile-active'} onClick={() => { handleActiveNav('resume') }}>
@@ -88,17 +105,18 @@ const MobileNavContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #F0F1FF;
+        background-color: #CDB5FF;
         position: absolute;
         top: 0;
-        right: -2%;
+        right: 10%;
         width: 100px;
         z-index: 5;
+        bottom: 0;
         }
 
     .icon{
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         fill: white;
     }
     .close-icon{
@@ -115,13 +133,13 @@ const MobileNavContainer = styled.div`
    
      }
      .mobile-active{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         text-align: center;
         /* background-color: black; */
         background-image: linear-gradient(to bottom right, #CDB5FF, #FCA5F1);
-        margin-top: 15px;
+        margin-bottom: 35px;
      }
      .mobile-selected{
         background: white;
@@ -165,6 +183,8 @@ const Wrapper = styled.div`
         .nav-item{
             text-decoration: none;
             color: black;
+            margin-left: 10px;
+         
             &:hover{
                 color: #CDB5FF;
             }
