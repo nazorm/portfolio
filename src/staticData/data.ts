@@ -1,64 +1,34 @@
-import typescriptIcon from "../assets/typescript.svg";
-import javascriptIcon from "../assets/javascript.svg";
-import reduxIcon from "../assets/redux.svg";
-import reactIcon from "../assets/react.svg";
-import htmlIcon from "../assets/html.svg";
-import gitIcon from "../assets/git.svg";
-import cssIcon from  "../assets/css.svg";
-import tailwindIcon from "../assets/tailwind.svg";
-import vsIcon from   "../assets/vscode.svg";
-import nextIcon from "../assets/next.svg";
-import jestIcon from "../assets/jest.svg";
-
-import { ReactComponent as TypescriptIcon } from "../assets/typescript.svg";
-import { ReactComponent as JavascriptIcon } from "../assets/javascript.svg";
-import { ReactComponent as ReduxIcon } from "../assets/redux.svg";
-import { ReactComponent as ReactIcon } from "../assets/react.svg";
-import { ReactComponent as HTMLIcon } from "../assets/html.svg";
-import { ReactComponent as GITIcon } from "../assets/git.svg";
-import { ReactComponent as CSSIcon } from "../assets/css.svg";
-import { ReactComponent as TailwindIcon } from "../assets/tailwind.svg";
-import { ReactComponent as VSIcon } from "./assets/vscode.svg";
-import { ReactComponent as NextIcon } from "../assets/next.svg";
-import { ReactComponent as JestIcon } from "../assets/jest.svg";
-
 export const resumeData = {
   workExperience: [
     {
-      timeFrame: "Nov 2021 - Present",
+      timeFrame: "Jan 2024 - Present",
+      role: "Frontend Developer",
+      company: "Fixit45",
+      workDone: [
+        "Led the development of an efficient booking system to track and enhance work progress.",
+        "collaborate with cross-functional teams to deliver scalable user interfaces, enhancing functionality and increasing user satisfaction.",
+        "Provided mentorship to junior developers, enhancing team performance and improving overall code quality.",
+      ],
+    },
+    {
+      timeFrame: "Nov 2021 - Dec 2023",
       role: "Frontend Developer",
       company: "Sterling Bank",
       workDone: [
-        "Launched a new version of Altmall to cater to user needs and pain points.",
-        "Spearheaded SEO optimization on Altmall which increased the lighthouse score by 15%.",
-        "Boosted sales by implementing the Altmall Offline Payment System.",
-        "Develop pixel-perfect interfaces that enhance user experience and usability of various web applications.",
-        "Create reusable components to streamline the development process and improve overall team efficiency.",
-        "Improve the code base by working together with teammates to reduce code debt.",
-        "Participate and contribute to brainstorming sessions for application features.",
+        "Spearheaded SEO optimization efforts, resulting in a 25% increase in organic traffic and customer acquisition.",
+        "Architected reusable, efficient frontend components, reducing development time.",
+        "Implemented an Offline Payment System, boosting sales by 15%.",
+        "Developed pixel-perfect interfaces, ensuring cross-browser compatibility and a seamless user experience.",
       ],
     },
     {
-      timeFrame: "Oct  2021 - June 2022",
+      timeFrame: "July  2021 - Oct 2021",
       role: "Frontend Developer",
       company: "Fantasy Gender Reveal",
       workDone: [
-        "Translated UI designs into functional code using NextJs, React Native, TypeScript, and Chakra UI",
-        "Setup theming on the mobile app",
-        "Managed global state with Redux",
-        "Developed a responsive admin panel to monitor application metrics and analytics",
-        "Improved the user experience by implementing feature updates that balance practicality and aesthetics",
-      ],
-    },
-    {
-      timeFrame: "Feb  2021 - Sep 2021",
-      role: "Frontend Developer",
-      company: "Build My House",
-      workDone: [
-        "Developed a responsive E-commerce PWA, collaborating closely with team members and utilizing Vue",
-        "Implemented Vue web components that were both reusable and easily maintainable.",
-        "Built the carting and product info system to streamline user experience.",
-        "Established an efficient transactions and services shipping system for improved order management",
+        "Developed responsive web admin pages for analytics tracking using NextJS and Chakra UI.",
+        "Implemented dark mode functionality, enhancing usability for diverse user preferences.",
+        "Translated intuitive campaign UI pages using React Native and TypeScript, boosting user engagement ",
       ],
     },
   ],
@@ -92,7 +62,7 @@ export const resumeData = {
       course: "Philosophy",
       institution: "University of Benin",
       timeFrame: "2014 - 2018",
-      educationSummary: "Second Class Honours 4.0/5.0",
+      educationSummary: "",
       educationHighlights: [],
     },
   ],
