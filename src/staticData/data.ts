@@ -52,7 +52,7 @@ export const resumeData = {
       timeFrame: "Jun 2020 - Aug 2020",
       educationSummary: "",
       educationHighlights: [
-        "Vanilla Javascript",
+        "Javascript",
         "Object Oriented Programming",
         "Working with APIs",
         "Technical Writing",
