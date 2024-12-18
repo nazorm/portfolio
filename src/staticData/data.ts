@@ -7,7 +7,7 @@ export const resumeData = {
       workDone: [
         "Led the development of an efficient booking system to track and enhance work progress.",
         "collaborate with cross-functional teams to deliver scalable user interfaces, enhancing functionality and increasing user satisfaction.",
-        "Provided mentorship to junior developers, enhancing team performance and improving overall code quality.",
+        "Provide mentorship to junior developers, enhancing team performance and improving overall code quality.",
       ],
     },
     {
